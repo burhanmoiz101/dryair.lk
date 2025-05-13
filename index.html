@@ -133,6 +133,14 @@
       padding: 1rem;
       border-radius: 4px;
       text-align: center;
+      background-color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    .feature:hover {
+      transform: translateY(-5px); /* Slightly lift the feature on hover */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a 3D effect */
+      border-color: #007BFF; /* Optional: Change border color on hover */
     }
     .contact {
       padding: 2rem;
@@ -190,6 +198,56 @@
     .center a:hover {
       color: #666; 
     }
+
+    .why-dehumidifier,
+.protect-against {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-dehumidifier h2,
+.protect-against h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.why-dehumidifier p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+  text-align: center;
+}
+
+.protect-against .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.protect-against .feature {
+  flex: 1 1 200px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.protect-against .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.protect-against .feature img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
   </style>
 </head>
 <body>
@@ -233,6 +291,45 @@
       </div>
     </div>
   </section>
+
+  <section class="section why-dehumidifier">
+  <h2>Why You Need a Dehumidifier</h2>
+  <p>
+    High humidity levels in Sri Lanka can wreak havoc on your property and health. Excess moisture in the air can cause rust, mildew, and damage to electronics, while also fostering allergens and dust mites. Whether you live near the coast or in the interior, protecting your home and business from moisture damage is essential.
+  </p>
+</section>
+
+<section class="section protect-against">
+  <h2>DRYAir Dehumidifiers Protect Against:</h2>
+  <div class="features">
+    <div class="feature">
+      <img src="images/corrosion.jpg" alt="Corrosion and Rust" />
+      <h3>Corrosion and Rust</h3>
+      <p>Prevent rust from forming on metal surfaces and electronics.</p>
+    </div>
+    <div class="feature">
+      <img src="images/electronics.jpg" alt="Electronics Failures" />
+      <h3>Electronics Failures</h3>
+      <p>Protect sensitive devices from moisture-related malfunctions.</p>
+    </div>
+    <div class="feature">
+      <img src="images/allergens.jpg" alt="Allergens" />
+      <h3>Allergens</h3>
+      <p>Reduce mold, mildew, and dust mites that trigger allergies.</p>
+    </div>
+    <div class="feature">
+      <img src="images/mildew.jpg" alt="Mildew & Odors" />
+      <h3>Mildew & Odors</h3>
+      <p>Eliminate musty odors caused by damp air.</p>
+    </div>
+    <div class="feature">
+      <img src="images/condensation.jpg" alt="Condensation" />
+      <h3>Condensation</h3>
+      <p>Minimize condensation on windows, walls, and equipment.</p>
+    </div>
+  </div>
+</section>
+
 
   <section class="section" id="products">
     <h2>Our Products</h2>
