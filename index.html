@@ -249,6 +249,16 @@
   border-radius: 4px;
 }
 
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
   </style>
 </head>
 <body>
@@ -271,7 +281,7 @@
     <a href="#products" class="btn">Explore Products</a>
   </section>
 
-  <section class="section" id="benefits">
+  <section class="section fade-in" id="benefits">
     <h2>Why Choose DRYAir?</h2>
     <div class="features">
       <div class="feature">
@@ -293,43 +303,43 @@
     </div>
   </section>
 
-  <section class="section why-dehumidifier">
-  <h2>Why You Need a Dehumidifier</h2>
-  <p>
-    High humidity levels in Sri Lanka can wreak havoc on your property and health. Excess moisture in the air can cause rust, mildew, and damage to electronics, while also fostering allergens and dust mites. Whether you live near the coast or in the interior, protecting your home and business from moisture damage is essential.
-  </p>
-</section>
+  <section class="section fade-in why-dehumidifier">
+    <h2>Why You Need a Dehumidifier</h2>
+    <p>
+      High humidity levels in Sri Lanka can wreak havoc on your property and health. Excess moisture in the air can cause rust, mildew, and damage to electronics, while also fostering allergens and dust mites. Whether you live near the coast or in the interior, protecting your home and business from moisture damage is essential.
+    </p>
+  </section>
 
-<section class="section protect-against">
-  <h2>DRYAir Dehumidifiers Protect Against:</h2>
-  <div class="features">
-    <div class="feature">
-      <img src="images/corrosion.jpg" alt="Corrosion and Rust" />
-      <h3>Corrosion and Rust</h3>
-      <p>Prevent rust from forming on metal surfaces and electronics.</p>
+  <section class="section protect-against">
+    <h2>DRYAir Dehumidifiers Protect Against:</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="images/corrosion.jpg" alt="Corrosion and Rust" />
+        <h3>Corrosion and Rust</h3>
+        <p>Prevent rust from forming on metal surfaces and electronics.</p>
+      </div>
+      <div class="feature">
+        <img src="images/electronics.jpg" alt="Electronics Failures" />
+        <h3>Electronics Failures</h3>
+        <p>Protect sensitive devices from moisture-related malfunctions.</p>
+      </div>
+      <div class="feature">
+        <img src="images/allergens.jpg" alt="Allergens" />
+        <h3>Allergens</h3>
+        <p>Reduce mold, mildew, and dust mites that trigger allergies.</p>
+      </div>
+      <div class="feature">
+        <img src="images/mildew.jpg" alt="Mildew & Odors" />
+        <h3>Mildew & Odors</h3>
+        <p>Eliminate musty odors caused by damp air.</p>
+      </div>
+      <div class="feature">
+        <img src="images/condensation.jpg" alt="Condensation" />
+        <h3>Condensation</h3>
+        <p>Minimize condensation on windows, walls, and equipment.</p>
+      </div>
     </div>
-    <div class="feature">
-      <img src="images/electronics.jpg" alt="Electronics Failures" />
-      <h3>Electronics Failures</h3>
-      <p>Protect sensitive devices from moisture-related malfunctions.</p>
-    </div>
-    <div class="feature">
-      <img src="images/allergens.jpg" alt="Allergens" />
-      <h3>Allergens</h3>
-      <p>Reduce mold, mildew, and dust mites that trigger allergies.</p>
-    </div>
-    <div class="feature">
-      <img src="images/mildew.jpg" alt="Mildew & Odors" />
-      <h3>Mildew & Odors</h3>
-      <p>Eliminate musty odors caused by damp air.</p>
-    </div>
-    <div class="feature">
-      <img src="images/condensation.jpg" alt="Condensation" />
-      <h3>Condensation</h3>
-      <p>Minimize condensation on windows, walls, and equipment.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <section class="section" id="products">
@@ -386,6 +396,24 @@
       nav.classList.toggle('show');
       hamburger.classList.toggle('active'); 
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+
+      const handleScroll = () => {
+        fadeElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add('visible');
+          } else {
+            el.classList.remove('visible');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Trigger on page load
+    });
   </script>
 
 </body>
