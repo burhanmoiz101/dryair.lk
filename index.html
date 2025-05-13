@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DRYAir Dehumidifiers Sri Lanka</title>
   <style>
     body {
@@ -12,16 +12,16 @@
       color: #333;
       background-color: #fff;
     }
+
     header, footer {
       background-color: #f8f8f8;
       padding: 1rem 2rem;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #f8f8f8;
-      padding: 1rem 2rem;
       position: relative;
     }
 
@@ -37,12 +37,11 @@
       border: none;
       cursor: pointer;
       display: none;
-      margin-left: auto;
-      display: none;
     }
+
     .hamburger.active {
-    transform: rotate(90deg); 
-  }
+      transform: rotate(90deg);
+    }
 
     nav {
       display: flex;
@@ -60,12 +59,10 @@
       color: #007BFF;
     }
 
-    /* Responsive styles */
     @media (max-width: 768px) {
       .hamburger {
         display: block;
       }
-      
 
       nav {
         flex-direction: column;
@@ -89,21 +86,23 @@
         transform: translateY(0);
       }
     }
-  
 
     .hero {
       text-align: center;
       padding: 4rem 2rem;
     }
+
     .hero h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .hero p {
       max-width: 600px;
       margin: 0 auto 2rem;
       color: #666;
     }
+
     .btn {
       background-color: #007BFF;
       color: #fff;
@@ -112,21 +111,25 @@
       border-radius: 4px;
       text-decoration: none;
     }
+
     .section {
       padding: 2rem;
       max-width: 1000px;
       margin: 0 auto;
     }
+
     .section h2 {
       text-align: center;
       margin-bottom: 1.5rem;
     }
+
     .features {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
+
     .feature {
       flex: 1 1 200px;
       border: 1px solid #ddd;
@@ -134,14 +137,26 @@
       border-radius: 4px;
       text-align: center;
       background-color: #fff;
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .feature:hover {
-      transform: translateY(-5px); /* Slightly lift the feature on hover */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a 3D effect */
-      border-color: #007BFF; 
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-color: #007BFF;
     }
+
+    .feature img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .contact {
       padding: 2rem;
       background-color: #f0f0f0;
@@ -149,16 +164,16 @@
       margin: 2rem auto;
       border-radius: 8px;
     }
-    .center{
-        text-align: center;
-    }
+
     .contact form {
       display: flex;
       flex-direction: column;
     }
+
     .contact label {
       margin-top: 1rem;
     }
+
     .contact input,
     .contact textarea {
       padding: 0.5rem;
@@ -167,6 +182,7 @@
       border-radius: 4px;
       width: 100%;
     }
+
     .contact button {
       margin-top: 1.5rem;
       background-color: #007BFF;
@@ -176,106 +192,43 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     .contact button:hover {
       background-color: #0056b3;
     }
+
     .success-message {
       color: green;
       margin-top: 1rem;
       align-self: center;
     }
+
+    .center {
+      text-align: center;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #333;  
+    }
+
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #999;
     }
-    
-    .center a {
-      text-decoration: none; 
-      color: grey; 
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 2s ease-out, transform 2s ease-out;
     }
 
-    .center a:hover {
-      color: #666; 
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .why-dehumidifier,
-.protect-against {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.why-dehumidifier h2,
-.protect-against h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.why-dehumidifier p {
-  max-width: 800px;
-  margin: 0 auto;
-  color: #666;
-  text-align: center;
-}
-
-.protect-against .features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.protect-against .feature {
-  flex: 1 1 200px;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 4px;
-  text-align: center;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.protect-against .feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-color: #007BFF; 
-}
-
-.protect-against .feature img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-}
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 2s ease-out, transform 2s ease-out;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .feature img {
-    width: 200px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the container without distortion */
-    border-radius: 4px; /* Optional: Add rounded corners */
-    margin-bottom: 1rem; /* Add space below the image */
-    display: block; /* Ensure proper alignment */
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-  }
-
-  
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo">DRYAir</div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -285,7 +238,6 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
 
   <section class="hero">
     <h1>Protect Your Home and Business from Moisture</h1>
@@ -353,7 +305,6 @@
     </div>
   </section>
 
-
   <section class="section" id="products">
     <h2>Our Products</h2>
     <div class="features">
@@ -403,12 +354,12 @@
       document.getElementById('successMessage').style.display = 'block';
       this.reset();
     });
- 
+
     function toggleMenu() {
       const nav = document.getElementById('main-nav');
       const hamburger = document.querySelector('.hamburger');
       nav.classList.toggle('show');
-      hamburger.classList.toggle('active'); 
+      hamburger.classList.toggle('active');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -429,7 +380,6 @@
       handleScroll(); // Trigger on page load
     });
   </script>
-
 </body>
 </html>
 
